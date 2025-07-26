@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Montserrat:wght@200;400;600&display=swap');
+
+
+$color : #ffecf2;
+$primary-color : #ff4880;
+$secondary-color : #4d65f9;
+$heading-font: 'Fredoka', sans-serif;
+$font2: "Montserrat", sans-serif;
+$footer-strip: #0c3e66;
+$text-color: #70747f;
+
+
+@mixin title {
+    color: $primary-color;
+    border-radius: 10% 30%;
+    border-bottom: 2px solid $primary-color;
+    display: inline-block;
+    font-weight: 600;
+}
+
+@mixin heading {
+    font-weight: 700;
+    font-family: $heading-font;
+    color: $footer-strip;
+    font-size: 4rem;
+
+    @media screen and (max-width:576px) {
+        font-size: calc(1.525rem + 3.3vw);
+    }
+}
+
+@mixin btn {
+    background-color: $primary-color;
+    border-radius: 25% 10%;
+    color: #fff;
+    font-weight: 600;
+
+    &:hover {
+        background-color: $secondary-color;
+        color: $primary-color;
+    }
+}

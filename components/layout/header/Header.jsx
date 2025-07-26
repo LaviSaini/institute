@@ -55,10 +55,10 @@ export default function Navbar() {
                     <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="navbarCollapse">
                         <div className="navbar-nav mx-auto">
                             <Link href="/" className="nav-item nav-link active">Home</Link>
-                            <Link href="/about" className="nav-item nav-link">About</Link>
-                            <Link href="/service" className="nav-item nav-link">Services</Link>
-                            <Link href="/service" className="nav-item nav-link">Blogs</Link>
-                            <Link href="/service" className="nav-item nav-link">Gallery</Link>
+                            <Link href="/about-us" className="nav-item nav-link">About</Link>
+                            <Link href="/services" className="nav-item nav-link">Services</Link>
+                            <Link href="/blogs" className="nav-item nav-link">Blogs</Link>
+                            <Link href="/gallery" className="nav-item nav-link">Gallery</Link>
                             <Link href="/contact" className="nav-item nav-link">Contact</Link>
                         </div>
                         <div className="d-flex">

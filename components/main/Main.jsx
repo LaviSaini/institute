@@ -3,27 +3,10 @@ import Link from 'next/link';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import About from "../common/aboutBrainWalk/aboutBrainWalk";
+import OurServices from "../common/ourServices/ourServices";
+import OurBlogs from "../common/ourBlogs/ourBlogs";
 
-
-
-const services = [
-    {
-        icon: 'fas fa-gamepad',
-        title: 'Study & Game',
-    },
-    {
-        icon: 'fas fa-sort-alpha-down',
-        title: 'A to Z Programs',
-    },
-    {
-        icon: 'fas fa-users',
-        title: 'Expert Teacher',
-    },
-    {
-        icon: 'fas fa-user-nurse',
-        title: 'Mental Health',
-    },
-];
 
 const events = [
     {
@@ -51,13 +34,6 @@ const events = [
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus consectetur,',
     },
 ];
-
-const Blog = [
-    { img: 'blog-1.jpg', title: 'How to pay attention to your child?', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus' },
-    { img: 'blog-2.jpg', title: 'Play outdoor sports with your child', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus' },
-    { img: 'blog-3.jpg', title: 'How to make time for your kids?', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed purus' }
-
-]
 
 const teamMembers = [
     { img: 'team-1.jpg', name: 'Linda Carlson', role: 'English Teacher' },
@@ -115,102 +91,8 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
-
-            <div className="py-5 about">
-                <div className="container py-5">
-                    <div className="row g-5 align-items-center">
-                        <div className="col-lg-5">
-                            <div className="video border">
-                                {/* <button
-                                    type="button"
-                                    className="btn btn-play"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#videoModal"
-                                    data-src="https://www.youtube.com/embed/DWRcNpR6Kdc"
-                                >
-                                    <span></span>
-                                </button> */}
-                            </div>
-                        </div>
-
-                        <div className="col-lg-7">
-                            <h4 className="title mb-4 p-2">
-                                About Us
-                            </h4>
-                            <h2 className="mb-4">
-                                We Learn Smart Way To Build Bright Future For Your Children
-                            </h2>
-                            <p className="text-dark mb-4">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                            </p>
-
-                            <div className="row mb-4">
-                                <div className="col-lg-6">
-                                    <h6 className="mb-3">
-                                        <i className="fas fa-check-circle me-2"></i>Sport Activities
-                                    </h6>
-                                    <h6 className="mb-3">
-                                        <i className="fas fa-check-circle me-2 text-primary"></i>Outdoor Games
-                                    </h6>
-                                    <h6 className="mb-3">
-                                        <i className="fas fa-check-circle me-2 text-secondary"></i>Nutritious Foods
-                                    </h6>
-                                </div>
-                                <div className="col-lg-6">
-                                    <h6 className="mb-3">
-                                        <i className="fas fa-check-circle me-2"></i>Highly Secured
-                                    </h6>
-                                    <h6 className="mb-3">
-                                        <i className="fas fa-check-circle me-2 text-primary"></i>Friendly Environment
-                                    </h6>
-                                    <h6>
-                                        <i className="fas fa-check-circle me-2 text-secondary"></i>Qualified Teacher
-                                    </h6>
-                                </div>
-                            </div>
-
-                            <Link href="#" className="btn px-5 py-3">
-                                More Details
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="py-5 service">
-                <div className="container py-5">
-                    <div className="mx-auto text-center" style={{ maxWidth: '700px' }}>
-                        <h4 className="title mb-4 p-2">
-                            What We Do
-                        </h4>
-                        <h2 className="mb-5">Thanks To Get Started With Our School</h2>
-                    </div>
-
-                    <div className="row g-5">
-                        {services.map((service, index) => (
-                            <div key={index} className="col-md-6 col-lg-6 col-xl-3">
-                                <div className="text-center bg-white service-item">
-                                    <div className="service-content d-flex align-items-center justify-content-center">
-                                        <div className="service-content-inner p-4">
-                                            <div className="p-4">
-                                                <i className={`${service.icon} fa-6x`}></i>
-                                            </div>
-                                            <h4>{service.title}</h4>
-                                            <p className="my-3">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, culpa qui officiis animi Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                            </p>
-                                            <a href="#" className="btn px-4 py-2 my-2">
-                                                Read More
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
+            <About/>
+            <OurServices/>
 
             <div className="py-5 program">
                 <div className="container py-5">
@@ -333,61 +215,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="py-5 blog">
-                <div className="container py-5">
-                    <div className="mx-auto text-center" style={{ maxWidth: '600px' }}>
-                        <h4 className="title mb-4 p-2">
-                            Latest News & Blog
-                        </h4>
-                        <h2 className="mb-5">Read Our Latest News & Blog</h2>
-                    </div>
-                    <div className="row g-5">
-                        {Blog.map((blog, i) => (
-
-                            <div key={i} className="col-md-6 col-lg-6 col-xl-4" style={{ visibility: 'visible' }}>
-                                <div className="blog-item">
-                                    <div className="blog-img">
-                                        <img src={`/${blog.img}`} className="img-fluid w-100" alt="Blog" />
-                                    </div>
-                                    <div className="px-4 py-3 blog-date-comments">
-                                        <small className="text-dark">
-                                            <i className="fas fa-calendar me-1 text-dark"></i> 29 Nov 2023
-                                        </small>
-                                        <small className="text-dark">
-                                            <i className="fas fa-comment-alt me-1 text-dark"></i> Comments (15)
-                                        </small>
-                                    </div>
-                                    <div className="blog-content px-4 py-3 d-flex align-items-center">
-                                        <div className="img-box">
-                                            <img
-                                                src="/program-teacher.jpg"
-                                                className="img-fluid rounded-circle p-2"
-                                                alt="Author"
-                                            />
-                                        </div>
-
-                                        <div className="ms-3">
-                                            <h6>Mary Mordern</h6>
-                                            <p className="text-muted">Baby Care</p>
-                                        </div>
-                                    </div>
-                                    <div className="blog-text-inner  px-4 pb-4">
-                                        <h4>{blog.title}</h4>
-                                        <p className="mt-3 mb-4">{blog.desc}</p>
-
-                                        <div className="text-center">
-                                            <a href="#" className="btn px-4 py-2 mb-3">
-                                                View Details
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
+            <OurBlogs/>
             <div className="py-5 team">
                 <div className="container py-5">
                     <div className="mx-auto text-center" style={{ maxWidth: '700px' }}>
